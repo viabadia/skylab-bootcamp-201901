@@ -7,7 +7,7 @@ function login(email, password, callback) {
         return user.email === email;
     });
 
-    if (!user) throw Error('user ' + email + ' not found');
+    //if (!user) throw Error('user ' + email + ' not found');
 
     if (user.password !== password) throw Error('wrong password');
 
