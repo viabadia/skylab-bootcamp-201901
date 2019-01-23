@@ -210,7 +210,7 @@ Object.defineProperty(RegisterPanel.prototype, 'error', {
         this.__error__.show();
     } 
 });
-
+z
 RegisterPanel.prototype = Object.create(Panel.prototype);
 RegisterPanel.prototype.constructor = RegisterPanel;
 
