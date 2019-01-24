@@ -41,8 +41,8 @@ function LoginPanel() {
     var $form = $container.children('form');
 
     this.__$form__ = $form;
-    this.__$emailInput__ = $form.children('input[type=email]');
-    this.__$passwordInput__ = $form.children('input[type=password]');
+    this.__$emailInput__ = $form.find('input[type=email]');
+    this.__$passwordInput__ = $form.find('input[type=password]');
 
     var errorPanel = new ErrorPanel;
     $container.append(errorPanel.$element);
@@ -129,11 +129,11 @@ function RegisterPanel() {
     this.__$form__ = $container.children('form');
     var $form = this.__$form__;
 
-    this.__$nameInput__ = $form.children('input[name=name]');
-    this.__$surnameInput__ = $form.children('input[name=surname]');
-    this.__$emailInput__ = $form.children('input[type=email]');
-    this.__$passwordInput__ = $form.children('input[name=password]');
-    this.__$passwordConfirmationInput__ = $form.children('input[name=password-confirmation]');
+    this.__$nameInput__ = $form.find('input[name=name]');
+    this.__$surnameInput__ = $form.find('input[name=surname]');
+    this.__$emailInput__ = $form.find('input[type=email]');
+    this.__$passwordInput__ = $form.find('input[name=password]');
+    this.__$passwordConfirmationInput__ = $form.find('input[name=password-confirmation]');
 
     var errorPanel = new ErrorPanel;
     $container.append(errorPanel.$element);
@@ -191,9 +191,11 @@ Object.defineProperty(RegisterPanel.prototype, 'onGoToLogin', {
 //#region home panel
 
 function HomePanel() {
-    Panel.call(this, $('<section class="home">'
+    Panel.call(this, $('<section class="home container">'
         + '<h2>Welcome, <span class="home__name"></span>!</h2>'
-        + '<button class="home__logout">Logout</button>'
+        + '<div class="form-group">'
+        + '<button class="btn btn-danger">Logout</button>'
+        + '</div>'
         + '</section>'));
 
     var $container = this.$element;
@@ -226,10 +228,14 @@ Object.defineProperty(HomePanel.prototype, 'onLogout', {
 //#region search panel
 
 function SearchPanel() {
-    Panel.call(this, $('<section>'
+    Panel.call(this, $('<section class="container">'
         + '<form>'
+        + '<div class="form-group">'
         + '<input type="text" placeholder="..." name ="query">'
-        + '<button type="submit">Search</button>'
+        + '</div>'
+        + '<div class="form-group">'
+        + '<button type="submit" class="btn btn-dark">Search</button>'
+        + '</div>'
         + '</form>'
         + '</section>'));
 
