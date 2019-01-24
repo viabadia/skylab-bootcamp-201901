@@ -124,7 +124,7 @@ function RegisterPanel() {
     $container.append(errorPanel.$element);
     this.__errorPanel__ = errorPanel;
 
-    var $loginLink = $('<a href="#" class="register__login-link">Login</a>');
+    var $loginLink = $('<a href="#">Login</a>');
     $container.append($loginLink);
     this.__$loginLink__ = $loginLink;
 }
@@ -156,11 +156,11 @@ Object.defineProperty(RegisterPanel.prototype, 'error', {
 });
 
 RegisterPanel.prototype.clear = function () {
-    this.__&nameInput__.val();
-    this.__&surnameInput__.val();
-    this.__&emailInput__.val();
-    this.__&passwordInput__.val();
-    this.__&passwordConfirmationInput__.val();
+    this.__$nameInput__.val();
+    this.__$surnameInput__.val();
+    this.__$emailInput__.val();
+    this.__$passwordInput__.val();
+    this.__$passwordConfirmationInput__.val();
     this.__errorPanel__.message = '';
     this.__errorPanel__.hide();
 };
