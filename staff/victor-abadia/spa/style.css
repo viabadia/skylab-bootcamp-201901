@@ -1,28 +1,28 @@
+h1 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
 .login {
-    background-color: skyblue;
+    background-color: #fffa67;
     padding: 2em;
     border-radius: 0.5em;
     border-style: solid;
-    border-color: gray;
-    color: white;
+    border-color: #ffcd60;
+    color: rgb(48, 48, 48);
 }
 
-.error {
+.alert {
     display: none;
-    background-color: red;
-    color: white;
-    border-radius: 0.5em;
-    border-style: solid;
-    border-color: white;
 }
 
 .register {
     display: none;
-    background-color: yellow;
+    background-color: #a2eae2;
     padding: 2em;
     border-radius: 0.5em;
     border-style: solid;
-    border-color: gray;
+    border-color: #41aaa8;
 }
 
 .home {
