@@ -10,12 +10,13 @@ class ArtistResults extends Component {
     componentDidMount() {
         const { props: { query } } = this
 
+        console.log('holaaaaaaaaaa')
+
         this.handleSearch(query)
     }
 
     componentWillReceiveProps(props) {
         const { query } = props
-
         this.handleSearch(query)
     }
 
